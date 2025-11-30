@@ -1,41 +1,41 @@
-# BioManager - Sistema de Gesti¨®n para BioMarket Colombia
+# BioManager - Sistema de GestiÃ³n para BioMarket Colombia
 
-Sistema web de gesti¨®n de inventarios y ventas desarrollado con React para BioMarket Colombia S.A.S.
+Sistema web de gestiÃ³n de inventarios y ventas desarrollado con React para BioMarket Colombia S.A.S.
 
 ---
 
-## Descripci¨®n del proyecto
+## DescripciÃ³n del proyecto
 
-BioManager es una aplicaci¨®n web moderna que automatiza y centraliza los procesos de gesti¨®n de inventarios y ventas para BioMarket Colombia, una empresa especializada en productos naturales y ecol¨®gicos.
+BioManager es una aplicaciÃ³n web moderna que automatiza y centraliza los procesos de gestiÃ³n de inventarios y ventas para BioMarket Colombia, una empresa especializada en productos naturales y ecolÃ³gicos.
 
 ### Funcionalidades principales
 
-* **Autenticaci¨®n de Usuarios**: Sistema de login con roles (**Administrador** y **Vendedor**)
-* **Dashboard Interactivo**: Panel de control con estad¨ªsticas en tiempo real
-* **Gesti¨®n de Inventario**: **CRUD** completo de productos con b¨²squeda y filtros
-* **Registro de Ventas**: Sistema de carrito de compras con validaci¨®n de stock
+* **AutenticaciÃ³n de Usuarios**: Sistema de login con roles (**Administrador** y **Vendedor**)
+* **Dashboard Interactivo**: Panel de control con estadÃ­sticas en tiempo real
+* **GestiÃ³n de Inventario**: **CRUD** completo de productos con bÃºsqueda y filtros
+* **Registro de Ventas**: Sistema de carrito de compras con validaciÃ³n de stock
 * **Control de Acceso**: Permisos basados en roles de usuario
 
 ---
 
-## Tecnolog¨ªas utilizadas
+## TecnologÃ­as utilizadas
 
 ### Front-End
-* **React 18.2.0**: Biblioteca principal para la construcci¨®n de la UI
-* **React Router DOM 6.20.0**: Navegaci¨®n y enrutamiento SPA
-* **Axios 1.6.0**: Cliente HTTP para comunicaci¨®n con APIs
-* **CSS3**: Estilos personalizados con dise?o responsive
+* **React 18.2.0**: Biblioteca principal para la construcciÃ³n de la UI
+* **React Router DOM 6.20.0**: NavegaciÃ³n y enrutamiento SPA
+* **Axios 1.6.0**: Cliente HTTP para comunicaciÃ³n con APIs
+* **CSS3**: Estilos personalizados con diseÃ±o responsive
 
 ### Conceptos implementados
 
 #### 1. **REST con Swagger**
-Aunque el proyecto usa datos mock para desarrollo, est¨¢ preparado para conectarse a una **API RESTful** documentada con Swagger/OpenAPI. Los endpoints est¨¢n definidos en `src/services/api.js`.
+Aunque el proyecto usa datos mock para desarrollo, estÃ¡ preparado para conectarse a una **API RESTful** documentada con Swagger/OpenAPI. Los endpoints estÃ¡n definidos en `src/services/api.js`.
 
 #### 2. **ReactJS - Componentes**
 Arquitectura basada en **componentes reutilizables**:
-* `Login.js`: Componente de autenticaci¨®n
-* `Dashboard.js`: Panel de estad¨ªsticas
-* `TablaInventario.js`: Listado y gesti¨®n de productos
+* `Login.js`: Componente de autenticaciÃ³n
+* `Dashboard.js`: Panel de estadÃ­sticas
+* `TablaInventario.js`: Listado y gestiÃ³n de productos
 * `FormularioProducto.js`: Formulario CRUD de productos
 * `RegistroVenta.js`: Sistema de ventas
 
@@ -65,7 +65,7 @@ Ejecuta efectos secundarios como llamadas a API al montar componentes.
 const { user, isAdmin } = useAuth();
 ```
 
-Accede al contexto de autenticaci¨®n desde cualquier componente.
+Accede al contexto de autenticaciÃ³n desde cualquier componente.
 
 **useReducer:**
 
@@ -78,38 +78,38 @@ Gestiona estados complejos del carrito de compras con acciones definidas.
 
 #### 4\. **Context API**
 
-Sistema global de estado para **autenticaci¨®n** (`AuthContext.js`):
+Sistema global de estado para **autenticaciÃ³n** (`AuthContext.js`):
 
-  * Manejo de sesi¨®n de usuario
-  * Verificaci¨®n de roles
+  * Manejo de sesiÃ³n de usuario
+  * VerificaciÃ³n de roles
   * Persistencia con localStorage
-  * Protecci¨®n de rutas
+  * ProtecciÃ³n de rutas
 
 #### 5\. **Peticiones HTTP con Axios**
 
-Configuraci¨®n centralizada en `api.js`:
+ConfiguraciÃ³n centralizada en `api.js`:
 
   * Interceptores para tokens **JWT**
   * Manejo de errores global
   * Sistema mock para desarrollo local
-  * Endpoints para productos, ventas y estad¨ªsticas
+  * Endpoints para productos, ventas y estadÃ­sticas
 
-#### 6\. **Rutas y navegaci¨®n**
+#### 6\. **Rutas y NavegaciÃ³n**
 
 React Router implementa:
 
-  * Rutas p¨²blicas (`/login`)
+  * Rutas pÃºblicas (`/login`)
   * Rutas protegidas (`/dashboard`, `/inventario`, `/ventas`)
-  * Redirecci¨®n autom¨¢tica seg¨²n autenticaci¨®n
-  * Layout compartido con navegaci¨®n
+  * RedirecciÃ³n automÃ¡tica segÃºn autenticaciÃ³n
+  * Layout compartido con navegaciÃ³n
 
 #### 7\. **Despliegue**
 
-El proyecto est¨¢ optimizado para despliegue en:
+El proyecto estÃ¡ optimizado para despliegue en:
 
   * **Vercel**: Frontend optimizado
   * **Netlify**: Alternativa con CI/CD
-  * **AWS S3 + CloudFront**: Para producci¨®n empresarial
+  * **AWS S3 + CloudFront**: Para producciÃ³n empresarial
 
 -----
 
@@ -117,32 +117,32 @@ El proyecto est¨¢ optimizado para despliegue en:
 
 ```
 biomanager/
-©À©¤©¤ public/
-©¦   ©À©¤©¤ index.html
-©¦   ©¸©¤©¤ favicon.ico
-©À©¤©¤ src/
-©¦   ©À©¤©¤ components/
-©¦   ©¦   ©À©¤©¤ Login.js
-©¦   ©¦   ©À©¤©¤ Dashboard.js
-©¦   ©¦   ©À©¤©¤ TablaInventario.js
-©¦   ©¦   ©À©¤©¤ FormularioProducto.js
-©¦   ©¦   ©¸©¤©¤ RegistroVenta.js
-©¦   ©À©¤©¤ context/
-©¦   ©¦   ©¸©¤©¤ AuthContext.js
-©¦   ©À©¤©¤ services/
-©¦   ©¦   ©¸©¤©¤ api.js
-©¦   ©À©¤©¤ App.js
-©¦   ©À©¤©¤ App.css
-©¦   ©À©¤©¤ App.test.js
-©¦   ©¸©¤©¤ index.js
-©À©¤©¤ package.json
-©À©¤©¤ README.md
-©¸©¤©¤ .gitignore
+â”œâ”€â”€ public/
+â”‚   â”œâ”€â”€ index.html
+â”‚   â””â”€â”€ favicon.ico
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â”œâ”€â”€ Login.js
+â”‚   â”‚   â”œâ”€â”€ Dashboard.js
+â”‚   â”‚   â”œâ”€â”€ TablaInventario.js
+â”‚   â”‚   â”œâ”€â”€ FormularioProducto.js
+â”‚   â”‚   â””â”€â”€ RegistroVenta.js
+â”‚   â”œâ”€â”€ context/
+â”‚   â”‚   â””â”€â”€ AuthContext.js
+â”‚   â”œâ”€â”€ services/
+â”‚   â”‚   â””â”€â”€ api.js
+â”‚   â”œâ”€â”€ App.js
+â”‚   â”œâ”€â”€ App.css
+â”‚   â”œâ”€â”€ App.test.js
+â”‚   â””â”€â”€ index.js
+â”œâ”€â”€ package.json
+â”œâ”€â”€ README.md
+â””â”€â”€ .gitignore
 ```
 
 -----
 
-## Instalaci¨®n y configuraci¨®n
+## InstalaciÃ³n y configuraciÃ³n
 
 ### Prerrequisitos
 
@@ -180,15 +180,15 @@ const api = axios.create({
 npm start
 ```
 
-La aplicaci¨®n estar¨¢ disponible en `http://localhost:3000`
+La aplicaciÃ³n estarÃ¡ disponible en `http://localhost:3000`
 
 -----
 
 ## Credenciales de prueba
 
-| Rol | Usuario | Contrase?a | Permisos |
+| Rol | Usuario | ContraseÃ±a | Permisos |
 | :--- | :--- | :--- | :--- |
-| **Administrador** | `admin` | `admin123` | Acceso completo (**CRUD** de productos, ver estad¨ªsticas, gestionar ventas) |
+| **Administrador** | `admin` | `admin123` | Acceso completo (**CRUD** de productos, ver estadÃ­sticas, gestionar ventas) |
 | **Vendedor** | `vendedor` | `vendedor123` | Ver inventario, registrar ventas, ver dashboard |
 
 -----
@@ -201,7 +201,7 @@ La aplicaci¨®n estar¨¢ disponible en `http://localhost:3000`
 npm test
 ```
 
-### Ver cobertura de c¨®digo
+### Ver cobertura de cÃ³digo
 
 ```bash
 npm test -- --coverage
@@ -211,20 +211,20 @@ npm test -- --coverage
 
 1.  **Pruebas de Componentes**: Renderizado y comportamiento de UI
 2.  **Pruebas de Hooks**: `useState`, `useEffect`, `useContext`, `useReducer`
-3.  **Pruebas de Context API**: Autenticaci¨®n y estado global
+3.  **Pruebas de Context API**: AutenticaciÃ³n y estado global
 4.  **Pruebas de API**: Servicios HTTP con Axios
-5.  **Pruebas de Rutas**: Navegaci¨®n y protecci¨®n de rutas
-6.  **Pruebas de Integraci¨®n**: Flujos completos de usuario
+5.  **Pruebas de Rutas**: NavegaciÃ³n y protecciÃ³n de rutas
+6.  **Pruebas de IntegraciÃ³n**: Flujos completos de usuario
 
 -----
 
-## Build para producci¨®n
+## Build para producciÃ³n
 
 ```bash
 npm run build
 ```
 
-Genera una carpeta `build/` optimizada para producci¨®n.
+Genera una carpeta `build/` optimizada para producciÃ³n.
 
 ## Despliegue
 
@@ -252,67 +252,67 @@ netlify deploy --prod
 
 ## Seguridad
 
-  * Autenticaci¨®n con **JWT** tokens
-  * Rutas protegidas con validaci¨®n de sesi¨®n
-  * Limpieza autom¨¢tica de sesi¨®n expirada
-  * Validaci¨®n de permisos por rol
-  * Sanitizaci¨®n de inputs en formularios
+  * AutenticaciÃ³n con **JWT** tokens
+  * Rutas protegidas con validaciÃ³n de sesiÃ³n
+  * Limpieza automÃ¡tica de sesiÃ³n expirada
+  * ValidaciÃ³n de permisos por rol
+  * SanitizaciÃ³n de inputs en formularios
 
-## Caracter¨ªsticas UX/UI
+## CaracterÃ­sticas UX/UI
 
-  * Dise?o **responsive** (m¨®vil, tablet, desktop)
+  * DiseÃ±o **responsive** (mÃ³vil, tablet, desktop)
   * Interfaz intuitiva con iconos descriptivos
   * Feedback visual en todas las acciones
   * Estados de carga para mejor experiencia
   * Validaciones en tiempo real
-  * Confirmaciones para acciones cr¨ªticas
+  * Confirmaciones para acciones crÃ­ticas
 
-## Funcionalidades por m¨®dulo
+## Funcionalidades por mÃ³dulo
 
 ### Dashboard
 
   * Total de productos en inventario
   * Total de ventas realizadas
   * Ingresos totales generados
-  * Ventas del d¨ªa actual
+  * Ventas del dÃ­a actual
   * Alertas de stock bajo
   * Tabla de ventas recientes
 
 ### Inventario
 
   * Listado completo de productos
-  * B¨²squeda por nombre, categor¨ªa o proveedor
-  * Creaci¨®n de nuevos productos (solo **Admin**)
-  * Edici¨®n de productos existentes (solo **Admin**)
-  * Eliminaci¨®n de productos (solo **Admin**)
+  * BÃºsqueda por nombre, categorÃ­a o proveedor
+  * CreaciÃ³n de nuevos productos (solo **Admin**)
+  * EdiciÃ³n de productos existentes (solo **Admin**)
+  * EliminaciÃ³n de productos (solo **Admin**)
   * Indicadores visuales de stock bajo
 
 ### Ventas
 
-  * Selecci¨®n de productos disponibles
+  * SelecciÃ³n de productos disponibles
   * Carrito de compras interactivo
-  * Validaci¨®n de stock en tiempo real
-  * C¨¢lculo autom¨¢tico de totales
+  * ValidaciÃ³n de stock en tiempo real
+  * CÃ¡lculo automÃ¡tico de totales
   * Registro de vendedor
-  * Actualizaci¨®n autom¨¢tica de inventario
+  * ActualizaciÃ³n automÃ¡tica de inventario
 
 -----
 
 ## Flujo de datos
 
-1.  Usuario ingresa credenciales **¡ú** Login
-2.  `AuthContext` valida y guarda sesi¨®n
-3.  Redirecci¨®n a **Dashboard** seg¨²n rol
-4.  Componentes consultan **API** v¨ªa **Axios**
+1.  Usuario ingresa credenciales **â†’** Login
+2.  `AuthContext` valida y guarda sesiÃ³n
+3.  RedirecciÃ³n a **Dashboard** segÃºn rol
+4.  Componentes consultan **API** vÃ­a **Axios**
 5.  Estado local (`useState`/`useReducer`) gestiona **UI**
-6.  **Context API** mantiene sesi¨®n global
-7.  Rutas protegen acceso seg¨²n autenticaci¨®n
+6.  **Context API** mantiene sesiÃ³n global
+7.  Rutas protegen acceso segÃºn autenticaciÃ³n
 
 -----
 
-## Soluci¨®n de problemas
+## SoluciÃ³n de problemas
 
-### La aplicaci¨®n no inicia
+### La aplicaciÃ³n no inicia
 
 ```bash
 rm -rf node_modules package-lock.json
@@ -338,7 +338,7 @@ const USE_MOCK = true;
 
 -----
 
-## Mantenimiento y actualizaci¨®n
+## Mantenimiento y actualizaciÃ³n
 
 ### Actualizar dependencias
 
@@ -356,7 +356,7 @@ npm audit fix
 
 -----
 
-## Contribuci¨®n
+## ContribuciÃ³n
 
 1.  Fork el proyecto
 2.  Crear rama de feature (`git checkout -b feature/nueva-funcionalidad`)
@@ -376,7 +376,7 @@ Proyecto desarrollado como parte del curso de Desarrollo de Software Front-End.
 
 ## Soporte
 
-Para preguntas o problemas, contactar a trav¨¦s del repositorio de **GitHub**.
+Para preguntas o problemas, contactar a travÃ©s del repositorio de **GitHub**.
 
 -----
 
