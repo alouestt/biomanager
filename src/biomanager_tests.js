@@ -1,4 +1,4 @@
-// src/App.test.js
+// src/biomanager_tests.js
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';

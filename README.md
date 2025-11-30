@@ -94,7 +94,7 @@ Configuración centralizada en `api.js`:
   * Sistema mock para desarrollo local
   * Endpoints para productos, ventas y estadísticas
 
-#### 6\. **Rutas y Navegación**
+#### 6\. **Rutas y navegación**
 
 React Router implementa:
 
@@ -122,22 +122,23 @@ biomanager/
 │   └── favicon.ico
 ├── src/
 │   ├── components/
-│   │   ├── Login.js
 │   │   ├── Dashboard.js
-│   │   ├── TablaInventario.js
 │   │   ├── FormularioProducto.js
-│   │   └── RegistroVenta.js
+│   │   ├── Login.js
+│   │   ├── RegistroVenta.js
+│   │   └── TablaInventario.js
 │   ├── context/
 │   │   └── AuthContext.js
 │   ├── services/
 │   │   └── api.js
-│   ├── App.js
-│   ├── App.css
-│   ├── App.test.js
+│   ├── app.css
+│   ├── app.js
+│   ├── biomanager_tests
 │   └── index.js
+├── .gitignore
+├── package-lock.json
 ├── package.json
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
 -----
@@ -350,7 +351,7 @@ npm audit fix
 ### Agregar nuevas funcionalidades
 
 1.  Crear componente en `src/components/`
-2.  Agregar ruta en `App.js`
+2.  Agregar ruta en `app.js`
 3.  Actualizar servicios en `api.js`
 4.  Escribir tests correspondientes
 
